@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Amaz_Inc.FiltroPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Amaz_Inc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="611*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="118*"/>
+        </Grid.RowDefinitions>
+        <GridView x:Name="gvFiltro" Margin="10,5,5,5" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="tbFiltro" HorizontalAlignment="Stretch" Margin="5,5,5,5" Text="Tipo" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="30" FontWeight="Bold"/>
+
+    </Grid>
+</Page>

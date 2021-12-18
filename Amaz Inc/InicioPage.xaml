@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="Amaz_Inc.InicioPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Amaz_Inc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Frame x:Name="frameAux">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="241*"/>
+            </Grid.RowDefinitions>
+            <Button Margin="4" Click="abrirPane">
+                <FontIcon Glyph="&#xE700;" FontFamily="Segoe MDL2 Assets"></FontIcon>
+            </Button>
+            <SplitView x:Name="svMenu" IsPaneOpen="False" PaneBackground="#FF99CDFF" DisplayMode="CompactInline" CompactPaneLength="48" Grid.ColumnSpan="2" Grid.Row="1" OpenPaneLength="200">
+                <SplitView.Pane>
+                    <Grid Margin="5,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <SymbolIcon Symbol="Home" HorizontalAlignment="Center" Width="25" Grid.Row="1" Margin="0,2,0,2" PointerReleased="irInicio" ToolTipService.ToolTip="Inicio"/>
+                        <SymbolIcon Grid.Row="2" Margin="0,2,0,2" Symbol="Caption" HorizontalAlignment="Center" Width="27" PointerReleased="irOrdenadores" ToolTipService.ToolTip="Ordenadores"/>
+                        <SymbolIcon Grid.Row="3" Margin="0,2,0,2" Symbol="Keyboard" HorizontalAlignment="Center" Width="27" PointerReleased="irPerifericos" ToolTipService.ToolTip="Perifericos"/>
+                        <SymbolIcon Grid.Row="4" Margin="0,2,0,2" Symbol="SelectAll" HorizontalAlignment="Center" Width="27" PointerReleased="irComponentes" ToolTipService.ToolTip="Componentes"/>
+                        <TextBlock x:Name="tbOrdenadores" Text="Ordenadores" Margin="3,6,2,3" Grid.Row="2" Grid.Column="1" PointerReleased="irOrdenadores"/>
+                        <TextBlock x:Name="tbInicio" Text="Inicio" Margin="3,6,2,2" Grid.Column="1" Grid.Row="1" PointerReleased="irInicio"/>
+                        <TextBlock x:Name="tbPerifericos" Text="Perifericos" Margin="3,6,2,2" Grid.Column="1" Grid.Row="3" PointerReleased="irPerifericos"/>
+                        <TextBlock x:Name="tbComponentes" Text="Componentes" Margin="3,6,2,2" Grid.Column="1" Grid.Row="4" PointerReleased="irComponentes"/>
+                    </Grid>
+                </SplitView.Pane>
+                <Frame x:Name="frmInicio" Content="Frame" HorizontalAlignment="Stretch" Margin="5,5,5,5" VerticalAlignment="Stretch"/>
+            </SplitView>
+        </Grid>
+    </Frame>
+</Page>

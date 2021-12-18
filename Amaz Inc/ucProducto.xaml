@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="Amaz_Inc.ucProducto"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Amaz_Inc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="250" Width="250">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbNombreProducto" Margin="5,5,5,10" Grid.Row="2" Text="Producto" TextWrapping="Wrap" HorizontalTextAlignment="Center" TextAlignment="Center"/>
+        <RatingControl x:Name="rcValoracion" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="69,0,0,0" IsEnabled="False" Height="32" Width="112" Grid.ColumnSpan="2"/>
+        <Image x:Name="imProducto" Margin="5,5,5,5" Grid.Row="1" Grid.ColumnSpan="2" PointerReleased="cargarDetalles" />
+        <TextBlock x:Name="tbPrecio" Grid.Column="1" Margin="5,5,1,10" Grid.Row="2" Text="Precio" TextWrapping="Wrap"/>
+        <TextBlock x:Name="tbEnlaceImagen" Margin="5,5,5,5" Text="TextBlock" TextWrapping="Wrap" Visibility="Collapsed"/>
+        <TextBlock x:Name="tbEnlaceImagen2" Margin="5,5,5,5" Grid.Row="2" Text="TextBlock" TextWrapping="Wrap" Visibility="Collapsed"/>
+        <Image x:Name="imFav" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="34,2,0,0" VerticalAlignment="Top" Width="30" PointerReleased="cambiarFav"/>
+
+    </Grid>
+</UserControl>

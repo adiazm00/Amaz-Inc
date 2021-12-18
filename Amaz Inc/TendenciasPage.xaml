@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Amaz_Inc.TendenciasPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Amaz_Inc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="265"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="265"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="265"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbDestacados" Text="Destacados" TextWrapping="Wrap" FontSize="30" FontWeight="Bold" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="tbMasVendidos" Text="Más vendidos" TextWrapping="Wrap" FontSize="30" FontWeight="Bold" Margin="5,5,5,5" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="tbPopulares" Text="Populares" TextWrapping="Wrap" FontSize="30" FontWeight="Bold" Margin="5,5,5,5" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <ScrollViewer x:Name="svDestacados" Grid.ColumnSpan="3" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="spDestacados" Margin="0,0,0,0" Orientation="Horizontal"/>
+        </ScrollViewer>
+        <ScrollViewer x:Name="svPopulares" Grid.ColumnSpan="3" Grid.Row="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="spPopulares" Orientation="Horizontal"/>
+        </ScrollViewer>
+        <ScrollViewer x:Name="svMasVendidos" Grid.ColumnSpan="3" Grid.Row="5" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="spMasVendidos" Orientation="Horizontal"/>
+        </ScrollViewer>
+    </Grid>
+</Page>
